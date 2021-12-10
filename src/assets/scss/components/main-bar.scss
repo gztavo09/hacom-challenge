@@ -1,0 +1,14 @@
+.navbar {
+    &-brand {
+        align-items: center;
+        display: flex;
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+        img {
+            max-width: 120px;
+            margin-left: 15px;
+        }
+    }
+} 

@@ -1,32 +1,25 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+	#app
+		main-bar.mb-4
+		b-container(fluid)
+			b-row
+				b-col(md='2')
+					side-bar
+				b-col(md='10')
+					router-view
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import MainBar from './components/main-bar'
+import SideBar from './components/side-bar'
+export default {
+	components: {
+		'main-bar': MainBar,
+		'side-bar': SideBar
+	}
 }
+</script>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="scss">
+	@import '@/assets/scss/style.scss';
 </style>

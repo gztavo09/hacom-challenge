@@ -1,0 +1,22 @@
+.sr-only {
+    display: none;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.chart-container {
+    .chart {
+        min-height: 400px;
+    }
+    &-small {
+        .chart {
+            min-height: 150px;
+        }
+    }
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
