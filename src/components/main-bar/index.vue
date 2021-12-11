@@ -1,6 +1,6 @@
 <template lang="pug">
 	b-navbar
-		b-container(fluid)
+		b-container
 			b-navbar-brand(href='#')
 				img(:src="logo")
 			b-navbar-toggle(target='nav-collapse')
@@ -8,9 +8,8 @@
 				b-navbar-nav.ml-auto
 					b-nav-item-dropdown(right)
 						template(#button-content)
-							span Gustavo Arias
-						b-dropdown-item(href='#') Profile
-						b-dropdown-item(href='#') Sign Out
+							span.user-panel Gustavo Arias
+								span Front End Developer
 </template>
 
 <script>

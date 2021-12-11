@@ -2,7 +2,7 @@
     .sidebar
         ul
             li
-                router-link(to='/') 
+                router-link(to='/', exact) 
                     BIconLayoutWtf
                     | Dashboard
             li

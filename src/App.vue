@@ -1,12 +1,13 @@
 <template lang="pug">
 	#app
 		main-bar.mb-4
-		b-container(fluid)
+		b-container
 			b-row
-				b-col(md='2')
+				b-col.br-solid(md='2')
 					side-bar
 				b-col(md='10')
-					router-view
+					.container-pad
+						router-view
 </template>
 
 <script>
@@ -22,4 +23,5 @@ export default {
 
 <style lang="scss">
 	@import '@/assets/scss/style.scss';
+	@import '@/assets/scss/_mobile.scss';
 </style>

@@ -16,9 +16,9 @@
         padding: 25px 0;
         list-style: none;
         li {
-            padding: 15px 25px;
             position: relative;
             margin-bottom: 15px;
+            border: 1px solid  transparent;
             svg {
                 position: relative;
                 top: 1px;
@@ -27,18 +27,12 @@
             a {
                 text-decoration: none;
                 color:$primary;
-                &:hover, &.router-link-exact-active {
+                padding: 15px;
+                display: block;
+                &:hover, &.router-link-active {
                     font-weight: bold;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        width: 8px;
-                        height: 10px;
-                        background-color: $secondary;
-                        height: 100%;
-                        left: 0;
-                        top: 0;
-                    }
+                    border: 1px solid  $secondary;
+                    border-radius: 8px;
                     svg {
                         color: $secondary;
                     }

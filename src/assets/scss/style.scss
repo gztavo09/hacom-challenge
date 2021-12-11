@@ -1,3 +1,11 @@
+* {
+    transition: all .5s;
+}
+
+.col-form-label, .form-group label {
+    font-size: 14px !important;
+}
+
 .sr-only {
     display: none;
 }
@@ -17,6 +25,62 @@
     }
 }
 
+.container-pad {
+    padding: 25px;
+}
+
+.modal {
+    &-header {
+        button {
+            background-color: transparent;
+            border: 0;
+            font-size: 20px;
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+
 .ml-auto, .mx-auto {
     margin-left: auto!important;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ced4da;
+    list-style: none;
+    padding: 15px;
+    width: 200px;
+    background: #fff;
+    border-top: 0;
+    li {
+        p {
+            font-size: 11px;
+            cursor: pointer;
+            margin: 0;
+            padding: 8px;
+            &:hover {
+                background-color: #ccc;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.custom-checkbox { 
+    .custom-control-input {
+        position: relative;
+        top: 1px;
+        margin-right: 8px;
+    }   
+}
+
+.br-solid {
+    border-right: 1px solid #ccc;
 }

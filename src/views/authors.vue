@@ -1,7 +1,8 @@
 <template lang="pug">
 	#authors
-		modal-author
-		data-table(:items='authors', :columns='columns', :perPage='perPage')
+		h5.mb-4 Lista de Autores
+		modal-author(ref='ModalAuthor')
+		data-table(:items='authors', :columns='columns', :perPage='perPage', @goRegister='openModal')
 </template>
 
 <script>
@@ -23,7 +24,8 @@ export default {
 				key: 'id',
 				label: 'ID',
 				sortable: false,
-				variant: 'info'
+				variant: 'info',
+				width: '100px'
         	},
 			{
 				key: 'author',
@@ -39,6 +41,12 @@ export default {
   },
   computed: {
 	  ...mapState(['authors'])
+  },
+  methods: {
+	  openModal (event) {
+		  console.log(event)
+		  this.$refs.ModalAuthor.open()
+	  }
   }
 }
 </script>
