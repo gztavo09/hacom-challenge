@@ -17,7 +17,7 @@
 				b-col(md='6')
 					b-form-group.mt-3.p-relative(label='Autor')
 						b-input-group
-							b-form-input(v-model='author' @keyup='filterName(author)' type='text' placeholder='')
+							b-form-input(v-model='author' @blur='clearFilterName' @keyup='filterName(author)' type='text' placeholder='')
 							b-input-group-append
 								b-button(@click="openModal") Nuevo autor
 						ul.autocomplete(v-if='authorsFiltered.length != 0')
